@@ -17,3 +17,5 @@ if edad >=4 and edad <18:
     print("usted tiene que pagar un monto de S/ 5")
 if edad >18:
     print("usted tiene que pagar por su edad un monto de S/10")
+
+

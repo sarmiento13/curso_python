@@ -4,7 +4,7 @@
 edad_usuario:int=int(input("ingrese sue edad"))
 if edad_usuario >=18:print("es mayor de edad")
 else:
-    print("no es mayor de edad")
+     print("no es mayor de edad")
 
 # escribir un programa que almacena la cadena de caracteres
 # contraseña en una variable, pregunte al usuario por la contraseña 
