@@ -42,6 +42,7 @@
 
 # crear un programa que me cuente la cantidad de comas y me meustre 
 # sus indices
+
 oracion:str=input("escribe una oracion con comas:")
 contador:int=0
 for n in range(0,len(oracion)):
