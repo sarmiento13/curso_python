@@ -31,4 +31,12 @@ sieguiente
 for n in range(1,11):
     print(n)
 ```
-### while
+# `para el examen`
+
+## **range** para oraciones pequeñas
+## **in** para oraciones medias es mas rapido y cosume menos 
+## **enumerate** en palabras pequeñas hace uso mas de memoria pero cuando son textos grande y medianos almacena menos y ejecuta mas rapido
+
+## while
+
+
