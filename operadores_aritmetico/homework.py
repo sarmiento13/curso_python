@@ -12,6 +12,7 @@ nota4=int=12
 promedio=float(nota1 + nota2 + nota3 + nota4)/4
 print(promedio)
 
+
 #1. Programa que repite el nombre del usuario:
 
 nombre = input("Por favor, introduce tu nombre: ")

@@ -38,5 +38,23 @@ for n in range(1,11):
 ## **enumerate** en palabras pequeñas hace uso mas de memoria pero cuando son textos grande y medianos almacena menos y ejecuta mas rapido
 
 ## while
+es un mecanismo que usa `pytho` para repetir intrucciones, la
+ semantica de esta centencia es: `mientras se cumpla la condicion has
+  algo`
+```python
+  while ():
+    print("hola)
+# un bucle infinito
+
+```
+## >metodos de string - array
+nombre="jose"
+nombre:upper() # > la funcion upper convierte el texto en 
+
+nombre="ALVARES"
+nombre:lower() # > convierte el texto en minuscula
+
+segundo_nombre="luis"
+print(segundo_nombre.capitalize()) # > convierte la primera letra en mayuscula
 
 

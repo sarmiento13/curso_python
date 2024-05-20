@@ -101,5 +101,53 @@
 # OOOO
 # uuuuu
 
-for figura in ("a","ee","iii";"ooo","uuuu"):
-    print(figura)
+#for figura in ("a","ee","iii";"ooo","uuuu"):
+ #   print(figura)
+
+## ejercicios while
+
+# 01
+# condicion=True
+# while condicion:
+#     print("hola")
+#     condicion=False
+# # 02
+# condicion=True
+# while condicion:
+#     eval=input("desea continuar[N/S]: ")
+#     if eval=="S":
+#         print("continuas en el bucle")
+#         continue
+#     else:
+#         print("se termino el programa")
+#         break
+# 03
+# contador=0
+# while contador<=5:
+#     print(contador)
+#     contador+=1
+# print(f"valor final{contador}:")
+
+## >metodos de string - array
+# nombre="jose"
+# nombre:upper() # > la funcion upper convierte el texto en 
+
+# nombre="ALVARES"
+# nombre:lower() # > convierte el texto en minuscula
+
+# segundo_nombre="luis"
+# print(segundo_nombre.capitalize()) # > convierte la primera letra en mayuscula
+
+## ejercios while
+# crear un programa que pida la cantidad de notas que se debe registrar, luego pedira
+# las notas e imprimera el promedio
+
+notas:str=(input("ingrese las catidades de notas:"))
+promedio=0
+while notas==5:
+    
+    print(f"")
+
+  
+
+
