@@ -9,52 +9,127 @@
 # - el usuario podra verificar su alquiler el cual le mostrar los detalles como la fecha, 
 #   hora y costo del alquiler que realizo  
 
-horarios_disponobles=["9:00 AM","11:00 AM","1:00 PM","3:00PM","5:00 PM","7:00 PM"]
-recervas={}
-while True:
-    print("/menu de apciones:")
-    print("1. ver horario disponibles")
-    print("2. realizar recerva")
-    print("3 pagar alquiler")
-    print("4.verificar alquiler")
-    print("5. salir")
 
-    opciones=input("selecione opciones:")
-    if opciones=="1":
-        print("horarios disponobles")
-        for horario in horarios_disponobles:
-            print("horario")
-    elif opciones=="2":
-        print("horarios disponibles")
-        for horario in horarios_disponobles:
-            print(horario)
-        horarios_elegidos=input("seleccione un horario para la recerva: ")
-        if horarios_elegidos in horarios_disponobles:
-            recervas[horarios_elegidos]={"fecha":"2024-05-30","costo":35}
-            print("recerva realizada con exito.")
-        else:
-            print("horario na valido.")
-    elif opciones=="3":
-        if recervas:
-            horario_recerva=input("ingrese el horario de la recerva a pagar: ")
-            if horario_recerva in recervas:
-                costo = recervas[horario_recerva][costo]
-                print(f"se ha realizado el pago por el alquiler de {horario_recerva}.costo:${costo}")
+# # Lista de horarios disponibles
+# horarios_disponibles = ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM", "5:00 PM"]
 
-            else:
-                print("no hay recervas realizadas.")
-    elif opciones=="4":
-        if recervas:
+# # Diccionario para almacenar las reservas realizadas
+# reservas = {}
 
+# # Menú interactivo para el usuario
+# while True:
+#     print("\nMenú de opciones:")
+#     print("1. Ver horarios disponibles")
+#     print("2. Realizar reserva")
+#     print("3. Pagar alquiler")
+#     print("4. Verificar alquiler")
+#     print("5. Salir")
 
-            
-    elif opciones=="5":
+#     opcion = input("Seleccione una opción: ")
+
+#     if opcion == "1":
+#         print("Horarios disponibles:")
+#         for horario in horarios_disponibles:
+#             print(horario)
     
+#     elif opcion == "2":
+#         print("Horarios disponibles:")
+#         for horario in horarios_disponibles:
+#             print(horario)
+#         horario_elegido = input("Seleccione un horario para la reserva: ")
+#         if horario_elegido in horarios_disponibles:
+#             reservas[horario_elegido] = {"fecha": "2024-05-30", "costo": 20}
+#             print("Reserva realizada con éxito.")
+#         else:
+#             print("Horario no válido.")
+    
+#     elif opcion == "3":
+#         if reservas:
+#             horario_reserva = input("Ingrese el horario de la reserva a pagar: ")
+#             if horario_reserva in reservas:
+#                 costo = reservas[horario_reserva]["costo"]
+#                 print(f"Se ha realizado el pago por el alquiler de {horario_reserva}. Costo: ${costo}")
+#             else:
+#                 print("Reserva no encontrada.")
+#         else:
+#             print("No hay reservas realizadas.")
+    
+#     elif opcion == "4":
+#         if reservas:
+#             for horario, detalles in reservas.items():
+#                 print(f"Fecha: {detalles['fecha']} | Hora: {horario} | Costo: ${detalles['costo']}")
+#         else:
+#             print("No hay reservas realizadas.")
+    
+#     elif opcion == "5":
+#         print("¡Gracias por utilizar el sistema de reserva y pago de alquiler!")
+#         break
+    
+#     else:
+#         print("Opción no válida. Inténtelo de nuevo.")
 
 
 
+# Lista de horarios disponibles
+horarios_disponibles = ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM", "5:00 PM"]
 
+# Lista para almacenar las horas reservadas
+horarios_reservados = []
 
+# Diccionario para almacenar las reservas realizadas
+reservas = {}
 
+# Menú interactivo para el usuario
+while True:
+    print("\nMenú de opciones:")
+    print("1. Ver horarios disponibles")
+    print("2. Realizar reserva")
+    print("3. Pagar alquiler")
+    print("4. Verificar alquiler")
+    print("5. Salir")
 
+    opcion = input("Seleccione una opción: ")
 
+    if opcion == "1":
+        print("Horarios disponibles:")
+        horarios_disponibles_no_reservados = [horario for horario in horarios_disponibles if horario not in horarios_reservados]
+        for horario in horarios_disponibles_no_reservados:
+            print(horario)
+    
+    elif opcion == "2":
+        print("Horarios disponibles:")
+        for horario in horarios_disponibles:
+            print(horario)
+        horario_elegido = input("Seleccione un horario para la reserva: ")
+        if horario_elegido in horarios_disponibles and horario_elegido not in horarios_reservados:
+            reservas[horario_elegido] = {"fecha": "2024-05-30", "costo": 20}
+            horarios_reservados.append(horario_elegido)
+            horarios_disponibles.remove(horario_elegido)
+            print("Reserva realizada con éxito.")
+        else:
+            print("Horario no válido o ya reservado.")
+    
+    elif opcion == "3":
+        if reservas:
+            horario_reserva = input("Ingrese el horario de la reserva a pagar: ")
+            if horario_reserva in reservas:
+                costo = reservas[horario_reserva]["costo"]
+                print(f"Se ha realizado el pago por el alquiler de {horario_reserva}. Costo: ${costo}")
+            else:
+                print("Reserva no encontrada.")
+        else:
+            print("No hay reservas realizadas.")
+    
+    elif opcion == "4":
+        if reservas:
+            for horario, detalles in reservas.items():
+                print(f"Fecha: {detalles['fecha']} | Hora: {horario} | Costo: ${detalles['costo']}")
+        else:
+            print("No hay reservas realizadas.")
+    
+    elif opcion == "5":
+        print("¡Gracias por utilizar el sistema de reserva y pago de alquiler!")
+        break
+    
+    else:
+        print("Opción no válida. Inténtelo de nuevo.")
