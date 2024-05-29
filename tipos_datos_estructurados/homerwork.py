@@ -1,4 +1,4 @@
-# crear una lista de 5 alumnos cada alumno almacenaremos su nombre 
+#01 crear una lista de 5 alumnos cada alumno almacenaremos su nombre 
 # apellidos edad 
 
 # insertar al final de la lista los datos de antoni 
@@ -39,3 +39,5 @@ lista_nueva=[
 ]
 lista_alumnos.append(lista_nueva)
 print(lista_alumnos)
+
+
