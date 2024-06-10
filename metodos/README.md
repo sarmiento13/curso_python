@@ -1,3 +1,39 @@
+# Metodos de python
+## numeros
+```python
+len(154789)
+# devuelve la cantiadad de digitos
+# 6
+```
+## texto
+```python
+len("hola mundo")
+# devuelve la cantidad de caracteres
+# el espacio cuenta tambien como un caracter
+# 10
+```
+1. str.lower(): Convierte todas las letras de la cadena a minúsculas.
+ ```python
+   "HELLO".lower()  # 'hello'
+  ``` 
+2. str.upper(): Convierte todas las letras de la cadena a mayúsculas.
+  ```python
+   "hello".upper()  # 'HELLO'
+  ``` 
+3. str.strip(): Elimina los espacios en blanco al principio y al final de la cadena.
+ ```python
+   "  hello  ".strip()  # 'hello'
+  ``` 
+4. str.replace(old, new): Reemplaza todas las apariciones de una subcadena por otra.
+```python
+   "hello world".replace("world", "Python")  # 'hello Python'
+ ```  
+
+5. str.split(sep=None): Divide la cadena en una lista usando un separador específico (por defecto, cualquier espacio en blanco).
+  ```python
+   "hello world".split()  # ['hello', 'world']
+   ```
+
 ## listas
 ```python
 
@@ -79,29 +115,3 @@ Las tuplas son inmutables, así que no tienen métodos para modificar su conteni
    my_dict.update({"b": 2, "c": 3})  # {"a": 1, "b": 2, "c": 3}
 ```
 
-### 8. listas y diccionarios por compresion
-es una tecnica pythonica que nos permite crear listas y diccionarios en una sola linea conbinado bucles y decisiones.
->[!NOTE]
-> *VLC* value loop condicion
-python
-# LISTA POR COMPRENSION
-texto="1,4,8,9,6"
-nueva_lista=[]
-## "n" toma todos los valores de texto
-for n in texto .split(","):
-    # append agrega algo en la lista
-    nueva_lista.append(int(n))
-## aplicando la tecnica vlc "valor bucle y condicion"
-texto="1,4,8,9,6"
-nueva_lista=[int(n) for n in texto.split(",")if int(n)%2==0]
-print(nueva_lista)
-## DICCIONARIO POR COMPRENSION
-lista_amigos=["abel","anthony","edith","ruth"]
-diccionario={}
-for _,v in enumerate(lista_amigos):
-    diccionario[v]=len(v)
-print(diccionario)
-## aplicando el vlc
-lista_amigos=["abel","anthony","edith","ruth"]
-diccionario={amigo:len(amigo)for amigo in lista_amigos}
-print(diccionario)
