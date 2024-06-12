@@ -41,6 +41,75 @@ las funciones pueden retornar (o devolver)un valor
 >[!WARNING]
 > No confudir print() con return, el valor retornado por return nos permite usarlo fuera de su contexto, y print() solo mostrara el literal por terminal.
 
- *ejemplo*
+## RETORNANDO MULTIPLES VALORES
+El secreto es hacerlo mediante un tipo de datos estructurados
+```python
+def tupla():
+    return 2,3,4
+varios()
+#retorna(2,3,4)
+def lista():
+    return ["hola",45]
+lista()
+#retorna["hola",45]
+def dicc():
+    return {"nombre":"jose","edad":45}
+dicc()
+#retorna {"nombre":"jose","edad":45}
+```
 
-en el archivo lecture.py
+## parametros  y argumentos 
+si una funcion no dispuciera de valores de entrada estaria limitada en su actuacion. es por ello que los `parametros` nos permiten variar los datos que consume una funcion para optener destintos resultados 
+**ejemplos**
+*crear una funcion que recibe un valor numerico y devuelve su raiz cuadrada *
+```python
+def aqrt(valor):
+    return valor**(1/2)
+# NOTA: en este caso, el valor 4 es un argumento de la funcion
+aqrt(4)
+```
+
+cuando llamamos  a un funcion con `argumento`, los valores de este argumentos se copian en los correspondientes `parametros` dentro de la funcion.
+```python
+def ejm(a,b,c):
+    return a+b+c
+ejm(4,5,6)
+```
+
+### Argumentios nominales 
+en esta aproximacion los argumentos no son copiados en un orden especifico sino que se **asigna por nombre a cada parametro**. Ello nos permite evitar el problema de conocer o recordar cual es el orden de los parametros en la definicion de la funcion. Para utilizarlo, basta con realizar una asignacion de cada argumento en la propia llamada a la funcion.
+9**ejemplo**
+```python
+def build_cpu(familia,num_core,frecuencia):
+    print(f"""
+         la cpu es de la familia {familia},
+         con {num_core} cores y con una frecuencia de {frecuencia}
+    """)
+# haciendo uso de argumentos nominales 
+build_cpu(num_core=4,ffamilia="intel",frecuencia=2.7)
+```
+
+### Argumentos posicionales 
+los argumentos no son copiados en un orden especifico, en este caso debemos conocer o recorder cual es el orden de los parametros 
+**ejemplo**
+```python
+def build_cpu(familia,num_core,frecuencia):
+    print(f"""
+         la cpu es de la familia {familia},
+         con {num_core} cores y con una frecuencia de {frecuencia}
+    """)
+# haciendo uso de argumentos nominales 
+build_cpu("intel",4,2.7)
+```
+## Parametros por defecto 
+Es posible especificar **valores por defecto** en los parametros de una funcion el caso de que no se proporcione un valor al argumento en la llamada ala funcion, el parametro correspondiente tomara el valor defenido por defecto.
+**ejemplo**
+```python
+def  alumno(nombre,app,estado="aprobado"):
+
+alumnos("ruth","castillo")
+alumnos("anthony","crucez","desaprobado")
+```
+## Desempaquetado/Empaquetado de argumentos(tarea)
+
+## Funciones internas de python (tarea)
