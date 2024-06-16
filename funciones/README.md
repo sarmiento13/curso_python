@@ -110,6 +110,143 @@ def  alumno(nombre,app,estado="aprobado"):
 alumnos("ruth","castillo")
 alumnos("anthony","crucez","desaprobado")
 ```
-## Desempaquetado/Empaquetado de argumentos(tarea)
+# Desempaquetado/Empaquetado de argumentos(tarea)
 
-## Funciones internas de python (tarea)
+El **desempaquetado y empaquetado de argumentos** en lenguajes de programación es una técnica que permite pasar múltiples argumentos a una función de manera más flexible y dinámica.
+ 
+### El desempaquetado de argumentos 
+  
+- se refiere a pasar argumentos a una función como una lista o diccionario.
+
+### El empaquetado de argumentos
+- implica pasar argumentos a una función de manera desempaquetada, es decir, expandiendo una lista o diccionario en argumentos individuales.
+ 
+## Partes
+ 
+### 1. Empaquetado de Argumentos:
+ 
+- Permite pasar múltiples argumentos a una función como una estructura única, como una lista o diccionario.
+- Ayuda a simplificar la llamada a funciones con múltiples argumentos.
+### 2. Desempaquetado de Argumentos:
+ 
+- Permite pasar argumentos a una función desempaquetados, es decir, como argumentos individuales en lugar de una estructura única.
+- Proporciona flexibilidad al llamar a funciones con argumentos almacenados en una lista o diccionario.
+ 
+## Funciones
+ 
+**- Empaquetado de Argumentos:**
+ 
+- En Python, se puede realizar el empaquetado de argumentos utilizando el operador ` * ` para listas y  `**`  para diccionarios.
+**Ejemplo en Python:**
+```python
+
+def my_function(*args):
+    for arg in args:
+        print(arg)
+
+my_function(1, 2, 3)
+```
+**- Desempaquetado de Argumentos:**
+ 
+- En Python, se puede realizar el desempaquetado de argumentos utilizando el operador ` * ` para listas y ` **`  para diccionarios.
+**Ejemplo en Python:**
+```python
+ Copiar
+def my_function(a, b, c):
+    print(a, b, c)
+
+my_list = [1, 2, 3]
+my_function(*my_list)
+```
+ 
+## Ejemplos
+ 
+### Empaquetado de Argumentos:
+ 
+- Enviar múltiples argumentos a una función como una lista:
+```python
+ 
+def my_function(*args):
+    for arg in args:
+        print(arg)
+
+my_function(1, 2, 3)
+```
+### Desempaquetado de Argumentos:
+
+- Pasar argumentos desempaquetados a una función desde una lista:
+```python
+ Copiar
+def my_function(a, b, c):
+    print(a, b, c)
+
+my_list = [1, 2, 3]
+my_function(*my_list)
+``` 
+ 
+### En resumen
+ **el desempaquetado y empaquetado de argumentos** en lenguajes de programación como Python proporciona una forma conveniente de trabajar con funciones que requieren múltiples argumentos de manera flexible. ¡Es una técnica muy útil en el desarrollo de software! 
+
+# Funciones internas de python (tarea)
+
+- En Python, **las funciones internas** son aquellas que vienen integradas en el lenguaje y están disponibles para su uso sin necesidad de importar módulos externos. Estas funciones internas son ampliamente utilizadas en `Python` y proporcionan funcionalidades útiles para realizar diversas tareas. 
+ 
+### Funciones Internas Comunes en Python:
+ 
+**1.  `print()  ` : Utilizada para imprimir mensajes en la consola.**
+ 
+```python
+ Copiar
+print("Hola, mundo!")
+``` 
+**2.    `len()  ` : Devuelve la longitud de un objeto (número de elementos).**
+ 
+```python
+ Copiar
+my_list = [1, 2, 3, 4, 5]
+print(len(my_list))  # Salida: 5
+```
+**3.    `type()  ` : Devuelve el tipo de un objeto.**
+ 
+```python
+ Copiar
+x = 5
+print(type(x))  # Salida: <class 'int'>
+``` 
+**4.    `input()  ` : Permite al usuario ingresar datos desde la consola.**
+ 
+```python
+ Copiar
+name = input("Ingrese su nombre: ")
+```
+**5.    `range()  ` : Genera una secuencia de números.**
+ 
+```python
+ Copiar
+for i in range(5):
+    print(i)  # Salida: 0, 1, 2, 3, 4
+ ```
+**6.    `sum()  ` : Calcula la suma de elementos en una secuencia.**
+ 
+```python
+ Copiar
+numbers = [1, 2, 3, 4, 5]
+total = sum(numbers)
+print(total)  # Salida: 15
+``` 
+**7.    `min()  `  y   ` max()  ` : Encuentran el valor mínimo y máximo en una secuencia.**
+ 
+```python
+ Copiar
+numbers = [10, 5, 8, 20]
+print(min(numbers))  # Salida: 5
+print(max(numbers))  # Salida: 20
+```
+**8.    `abs()  ` : Devuelve el valor absoluto de un número.**
+ 
+```python
+ Copiar
+x = -10
+print(abs(x))  # Salida: 10
+```
+ 
