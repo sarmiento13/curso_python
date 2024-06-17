@@ -46,5 +46,9 @@
 #         edad=edad
 #     )
 # print(persona(nombre.edad))
-    
 
+##  empaquetado y desempaqueta de argumento nominales 
+def alumnos(**kwargs):
+    kwargs["nombre"]="abel"
+    print(kwargs)
+alumnos(nombres="miguel",apellidos="largo",edad=30)

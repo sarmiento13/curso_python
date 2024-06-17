@@ -249,4 +249,10 @@ print(max(numbers))  # Salida: 20
 x = -10
 print(abs(x))  # Salida: 10
 ```
- 
+ #### averiguar y leer para saber del tema 
+ ## TIPOS DE FUNCINES 
+ ### Funciones Anonimas (Funciones lamda)
+ ### Funciones Closure
+ ### Funciones Callback
+
+ ### Programacion Funcional
