@@ -48,7 +48,29 @@
 # print(persona(nombre.edad))
 
 ##  empaquetado y desempaqueta de argumento nominales 
-def alumnos(**kwargs):
-    kwargs["nombre"]="abel"
-    print(kwargs)
-alumnos(nombres="miguel",apellidos="largo",edad=30)
+# def alumnos(**kwargs):
+#     kwargs["nombre"]="abel"
+#     print(kwargs)
+# alumnos(nombres="miguel",apellidos="largo",edad=30)
+
+## ejemplos de lambda
+# saludo=lambda:"hola"
+# print(saludo())
+
+# crear un programa anonimo que recibe como parametro una lista de 5 numeros y retorne dos listas 
+# una con los numeros pares y otra con numeros impares 
+list=[1,2,3,4,5]
+pares=lambda l:[n for n in list if n%2==0]
+impares=lambda l:[n for n in list if n%2!=0]
+print(pares(list))
+print(impares(list))
+
+int (input())
+
+def mensaje(m):
+    print(m)
+
+def pedir_nombre():
+    nombre=input("ingresa tu nombre")
+    return nombre
+mensaje(pedir_nombre())

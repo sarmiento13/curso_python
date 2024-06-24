@@ -250,9 +250,40 @@ x = -10
 print(abs(x))  # Salida: 10
 ```
  #### averiguar y leer para saber del tema 
- ## TIPOS DE FUNCINES 
+ ## TIPOS DE FUNCIONES 
  ### Funciones Anonimas (Funciones lamda)
+ una funcion que no tiene nombre 
+ ```python
+ lamda:"hola" 
+#normal
+def saludo():
+    return "hola"
+ ```
  ### Funciones Closure
+ una funcion que dentro tiene otra funcion 
+`def saludo(nombre):
+     print(f"bienvenido {nombre}")
+ `
  ### Funciones Callback
+```python
 
+```
  ### Programacion Funcional
+la programacion funcional no requiere que sepas como se desarrolla y ejecuta el procesamiento de la informacion
+**ejemplo**
+```python
+# programacion iterativa 
+lista=[5,7,8,4,1]
+def num_minimo(l):
+    minimo=l[0]
+    for n in l:
+        if n < minimo:
+            minimo=n
+    return minimo 
+# programacion funcional
+min(lista) 
+```
+#### Hacer tarea  sobre map(), filter(), reduce()
+## MAP()
+## FILTER()
+## REDUCE()
