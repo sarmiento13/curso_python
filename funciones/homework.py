@@ -58,5 +58,9 @@ print(Min(*valores))
 print(Max(*valores))
 print(Sum(*valores))
 
-
+# tarea
+# crear una lista de alumnos con los siguientes campos 
+# nombre, apellido , edad ,celular, email
+# 1= actualizar los registros con un campo mas todos tendran el campo de estudio de programa de estudio de enfermeria
+# 2 = buscar el segundo registro y actualizar su edad a 50 años 
 
