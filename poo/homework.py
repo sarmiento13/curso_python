@@ -37,8 +37,6 @@ cliente1.depositar(500)
 cliente1.retirar(200)
 cliente1.ver_estado_de_cuenta()
 
-
-
 # crear una clase agencia con sus atributos nombre, apellido del pasajero, dni, numero de asiento y fecha de viaje
 # sus metodos seran ingresar origen, ingresar destino, cancelar y ver estado de pasaje
 
@@ -75,7 +73,7 @@ class Agencia:
         print(f"Estado: {self.estado}")
 
 # Ejemplo de uso
-pasajero1 = Agencia("Juan", "Pérez", "12345678A", 12, "2023-12-25")
-pasajero1.ingresar_origen("Madrid")
-pasajero1.ingresar_destino("Barcelona")
+pasajero1 = Agencia("miguel", "gonzales", "12345678A", 12, "2023-12-25")
+pasajero1.ingresar_origen("nazca")
+pasajero1.ingresar_destino("puquio")
 pasajero1.ver_estado_de_pasaje()
